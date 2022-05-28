@@ -1,0 +1,29 @@
+<!-- After Login -> Redirect to Company List -->
+
+<app-navbar></app-navbar>
+<app-video-bg></app-video-bg>
+
+  <form method="post">
+      <h3>Login </h3>
+      <div class="container">
+          <div class="displayDiv">
+              <input class="input" type="text" placeholder="Username" name="username" required>
+              <span class="focus-border"> <i></i></span>
+          </div>
+          <div class="displayDiv">
+              <input class="input" type="password" placeholder="Password" name="password" required>
+              <span class="focus-border"> <i></i></span>
+          </div>
+          <button type="submit"><strong>Login</strong></button>
+      </div>
+
+      <div class="container2">
+          <span class="noAccount"><strong><a class="noAccount" href="register">Don't have an
+                      account?</a></strong></span>
+      </div>
+  </form>
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+
+

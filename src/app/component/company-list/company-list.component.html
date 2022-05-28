@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<app-particles></app-particles>
+<p-toast></p-toast>
+
+<p-toolbar styleClass="p-mb-4">
+  <ng-template pTemplate="left">
+    <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2"
+            (click)="openCreateModal()"></button>
+  </ng-template>
+</p-toolbar>
+
+<!--Table-->
+<div class="table">
+<p-table [value]="companies" (selection)="selectedCompany" selectionMode="single">
+  <ng-template pTemplate="header">
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>E-mail</th>
+      <th>Address</th>
+      <th>Phone Nr</th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-company>
+    <tr pSelectableRow="companies">
+      <td></td>
+      <td>{{company.name}}</td>
+      <td>{{company.email}}</td>
+      <td>{{company.address}}</td>
+      <td>{{company.phoneNr}}</td>
+
+      <td id="buttons" style="margin-right:1rem !important;">
+        <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="openEditModal(company)"></button>
+        <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"
+                (click)="deleteCompany(company)"></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+</div>
+<app-footer></app-footer>

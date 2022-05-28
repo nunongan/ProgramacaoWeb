@@ -1,0 +1,44 @@
+<form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+
+  <div class="p-grid">
+    <div class="p-col p-field p-grid p-m-2 p-p-2">
+      <label for="id" class="p-col-fixed" style="width:100px">Id</label>
+      <div class="p-col">
+        <input id="id" type="text" formControlName="id" pInputText required autofocus>
+      </div>
+    </div>
+
+    <div class="p-col p-field p-grid p-m-2 p-p-2">
+      <label for="name" class="p-col-fixed" style="width:100px">Name</label>
+      <div class="p-col">
+        <input id="name" type="text" formControlName="name" pInputText required autofocus>
+      </div>
+    </div>
+
+    <div class="p-col p-field p-grid p-m-2 p-p-2">
+      <label for="email" class="p-col-fixed" style="width:100px">E-mail</label>
+      <div class="p-col">
+        <input id="email" formControlName="email" type="text" pInputText required autofocus>
+      </div>
+    </div>
+
+    <div class="p-col p-field p-grid p-m-2 p-p-2">
+      <label for="address" class="p-col-fixed" style="width:100px">Address</label>
+      <div class="p-col">
+        <input id="address" formControlName="address" type="text" pInputText required autofocus>
+      </div>
+    </div>
+
+    <div class="p-col p-field p-grid p-m-4 p-p-2">
+      <label for="contact" class="p-col-fixed" style="width:100px">Contact</label>
+      <div class="p-col">
+        <input id="contact" formControlName="phoneNr" type="text" pInputText required autofocus>
+      </div>
+    </div>
+  </div>
+
+  <button id="modalButton" pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+  <button id="modalButton" pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" type="submit"
+          [disabled]="!companyForm.valid"></button>
+
+</form>

@@ -1,0 +1,32 @@
+.navbar
+{
+    background-color: #2b2b2b;
+    z-index: 2;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    text-decoration: underline;
+
+}
+
+.text-projex{
+
+  color: #0AC031;
+}
+
+a.navbar-brand.text-projex{
+
+    padding-left: 1rem;
+
+}
+
+a.nav-link.text-light:hover{
+
+  color:#0AC031 !important;
+}

@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family:'Times New Roman', Times, serif;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 40%;
+  max-width: 400px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin: 5% auto;
+  box-shadow: 0.5px 0.5px 5px 4px #fff;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+form:hover {
+
+  transform: scale(1.2);
+
+}
+
+body:before,
+body:after {
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+body:before {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+
+input[type=text],
+input[type=password] {
+  border: 0;
+  border-bottom: 1px solid #0AC031;
+  background-color: transparent;
+  width: 100%;
+  float: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 0 10px;
+  height: 50px;
+  color: #000;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+
+}
+
+input:hover {
+
+  border-bottom: 1px solid #1d5629;
+
+}
+
+input~.focus-border:before,
+input~.focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1d5629;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+
+input~.focus-border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  transition-delay: 0.6s;
+}
+
+input~.focus-border i:before,
+input~.focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #1d5629;
+  transition: 0.2s;
+}
+
+input~.focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+
+input:focus~.focus-border:before,
+input:focus~.focus-border:after {
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
+}
+
+input:focus~.focus-border:after {
+  transition-delay: 0.2s;
+}
+
+input:focus~.focus-border i:before,
+input:focus~.focus-border i:after {
+  height: 100%;
+  transition: 0.2s;
+}
+
+input:focus~.focus-border i:after {
+  transition-delay: 0.4s;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+
+  --color1: #1d5629;
+  --color2: #0ac031;
+}
+
+button {
+  background: #1d5629;
+  transition: 0.5s;
+  text-transform: uppercase;
+  box-shadow: inset 0.5px 0.5px 5px 1px #0ac031, inset 0.5px 0.5px 5px 1px #1d5629;
+  background: linear-gradient(90deg, var(--color1, #1d5629), var(--color2, #0ac031) 51%, var(--color1, #1d5629)) var(--x, 0)/ 200%;
+  color: white;
+  padding: 14px 20px;
+  margin: 50px auto;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 40px;
+}
+
+button:hover {
+  --x: 100%;
+  color: black;
+
+}
+
+.container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container2 {
+
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+  line-height: 30px;
+
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
+
+.noAccount {
+
+  color: #000 !important;
+  opacity: 0.5 !important;
+  text-decoration: none !important;
+}
+
+.noAccount:hover {
+
+  color: #000 !important;
+  opacity: 1 !important;
+  transition: 0.5s !important;
+}
+
+
+@media (pointer: coarse) and (hover: none) {
+  body {
+    background-size: cover;
+  }
+
+}
+
+h3 {
+
+  text-align: center;
+  color: #000;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+}
+
+@media screen and (max-width: 500px) {
+
+  form {
+
+    max-width: 90%;
+    width: 90%;
+  }
+
+
+
+}
+
+@media (min-width: 501px) and (max-width: 992px) {
+
+  form {
+
+    max-width: 60%;
+    width: 60%;
+  }
+
+
+
+}
+
+.displayDiv {
+
+  display: block;
+  float: none;
+  width: 80%;
+  clear: both;
+  position: relative;
+  max-width: 250px;
+  margin: 0 auto 20px;
+
+}

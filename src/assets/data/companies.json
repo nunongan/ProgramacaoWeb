@@ -1,0 +1,27 @@
+{
+  "companies": [
+    {
+      "id": "2",
+      "name": "Adidas",
+      "email": "contacts@adidas.pt",
+      "address": "Adidas Street",
+      "phoneNr": "098765432",
+      "img": "../src/assets//logos/logo-2.png"
+    },
+    {
+      "id": "3",
+      "name": "New Balance",
+      "email": "contacts@newbalance.pt",
+      "address": "New Balance Street",
+      "phoneNr": "987654321",
+      "img": "../src/assets/logos/logo-3.png"
+    },
+    {
+      "id": "1",
+      "name": "Nike",
+      "email": "nike@contacts.pt",
+      "address": "Nike Street",
+      "phoneNr": "123456789"
+    }
+  ]
+}
